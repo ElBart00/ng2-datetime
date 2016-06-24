@@ -116,7 +116,7 @@ export class NKDatetime implements ControlValueAccessor, AfterViewInit, OnDestro
                         this.date = new Date();
 
                         if (this.datepicker !== undefined) {
-                            this.datepicker.datepicker('update', this.date.toLocaleDateString('en-US'));
+                            this.datepicker.datepicker('update', this.date);
                         }
                     }
                     this.date.setHours(parseInt(hours));
@@ -131,7 +131,7 @@ export class NKDatetime implements ControlValueAccessor, AfterViewInit, OnDestro
     private updateModel(date?:Date) {
         // update date
         if (this.datepicker !== undefined) {
-            this.datepicker.datepicker('update', date.toLocaleDateString('en-US'));
+            this.datepicker.datepicker('update', date);
         }
 
         // update time
